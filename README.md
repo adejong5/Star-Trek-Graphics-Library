@@ -4,7 +4,7 @@ Library of graphical assets for creating Star Trek style images and svgs
 > [!Important]
 > This is very much a work in progress. Very few of the standards and conventions have actually been applied. Use at your own peril, and please contribute by creating a PR.
 
-# How to use this library
+## How to use this library
 This library is a collection of Star Trek themed images, svgs, and graphical assets. These are organized in categories using folders. Here is a not-up-to-date example:
 
 ```
@@ -36,16 +36,18 @@ This library is a collection of Star Trek themed images, svgs, and graphical ass
 │   ├── Deep Space Nine.md
 ```
 
-- MSDs
+### MSDs
   These are high quality, detailed images and SVGs for use in Master System Displays. These should follow the [Element Naming Convention](#element-naming-convention) whenever possible to facilitate in locating callouts.
-- Assets
+### Assets
   These are individual components and pieces, typically taken from MSDs, which can easily be copy/pasted into new designs. These should be categorized by the physical description of the assets (e.g. "arrays" instead of "warp field generator bank") because they might be reused in other ways (e.g. an array of EV batteries"). These should follow the [Element Naming Convention](#element-naming-convention) whenever possible to facilitate in locating callouts.
-- Color Palettes
+### Color Palettes
   These are collections of common color codes from various eras, ships, cultures, and command functions.
 
-# Element Naming Convention
+## Element Naming Convention
 Many Master System Displays include callouts pointing to key areas of the ship. To facilitate in creating these, elements can be given meaningful names. An obvious candidate for storing this information in an svg is using an `id` attribute. However, this is complicated by the fact that Inkscape automatically creates `id` attributes for every element, usually with meaningless names such as `path1234-2-1`. For this reason, both the `id` attribute and `Title` sub-element should be used. Examples include:
-`<path id="Front Window" ... ><title>Front Window</title></path>` 
+```
+<path id="Front Window" ... ><title>Front Window</title></path>
+```
   for the `path` element containing the front window of shuttlecraft
 
 ```
@@ -55,7 +57,7 @@ Many Master System Displays include callouts pointing to key areas of the ship. 
 ```
 for an array of nodes located in the engine compartment.
 
-# Disclaimer & Affiliation
+## Disclaimer & Affiliation
 This project is a non-commercial fan production. *Star Trek* and all related marks, logos, and characters are solely owned by CBS Studios Inc. This fan production is not endorsed by, sponsored by, nor affiliated with CBS, Paramount Pictures, or any other *Star Trek* franchise. 
 
 No commercial exhibition or distribution is permitted. No alleged independent rights will be asserted against CBS or Paramount Pictures. This work is intended for personal and recreational use only.
